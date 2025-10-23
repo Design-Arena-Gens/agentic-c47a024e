@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 255 255 255;
+  --color-text: 17 24 39;
+}
+
+.dark {
+  --color-bg: 17 24 39;
+  --color-text: 243 244 246;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-bg));
+}
+
+/* Safe area for sticky bottom nav */
+:root {
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+/* Card focus ring */
+.card-focus:focus-visible {
+  @apply outline-none ring-2 ring-accent-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+}
